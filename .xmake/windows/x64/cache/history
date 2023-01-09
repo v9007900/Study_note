@@ -1,13 +1,5 @@
 {
     cmdlines = {
-        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]],
-        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\update_intellisense.lua .vscode]],
-        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
-        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]],
-        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\update_intellisense.lua .vscode]],
-        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
-        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
-        [[xmake f -p windows -a x86 -m debug -o f:\Ipad\Study_note\Study_note/build]],
         "xmake -w",
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\targets.lua]],
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\targets.lua]],
@@ -63,6 +55,14 @@
         "xmake build -w Hook",
         "xmake build -w Hook",
         "xmake build -w Hook",
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]],
+        [[xmake f -p windows -a x64 -m release -o f:\Ipad\Study_note\Study_note/build]],
+        "xmake -w",
+        "xmake -w",
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
+        "xmake -w",
+        "xmake -w",
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]]
     }

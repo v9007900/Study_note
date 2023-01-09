@@ -1,12 +1,12 @@
 {
-    recheck = false,
     mtimes = {
         ["xmake.lua"] = 1673295952
     },
+    recheck = false,
     options = {
-        buildir = [[f:\Ipad\Study_note\Study_note/build]],
-        mode = "release",
+        plat = "windows",
         arch = "x64",
-        plat = "windows"
+        mode = "release",
+        buildir = [[f:\Ipad\Study_note\Study_note/build]]
     }
 }
