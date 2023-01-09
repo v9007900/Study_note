@@ -1,20 +1,24 @@
 {
-    find_program_msvc_arch_x64_plat_windows_checktoolcxx = {
-        ["cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\cl.exe]]
+    find_program_msvc_arch_x86_plat_windows_checktoolcxx = {
+        ["cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\cl.exe]]
     },
-    find_programver = {
-        ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe"] = false
+    find_program_msvc_arch_x86_plat_windows_checktoolld = {
+        ["link.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\link.exe]]
     },
     ["lib.detect.has_flags"] = {
-        ["windows_x64_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags__-DNDEBUG"] = true,
-        ["windows_x64_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe__cxx___-O2 -fp:fast"] = true,
-        ["windows_x64_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags__cl_sourceDependencies"] = true
-    },
-    find_program_msvc_arch_x64_plat_windows_checktoolsh = {
-        ["link.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\link.exe]]
+        ["windows_x86_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe__cxx___-O2 -fp:fast"] = true,
+        ["windows_x86_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe__cxx_cxflags__-DNDEBUG"] = true,
+        ["windows_x86_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe__cxx_cxflags__cl_sourceDependencies"] = true
     },
     find_program = {
-        ["cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\cl.exe]],
-        ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\cl.exe]]
+        dmd = false,
+        ["cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\cl.exe]],
+        ldc2 = false,
+        gdc = false,
+        zig = false,
+        ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\cl.exe]]
+    },
+    find_programver = {
+        ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe"] = false
     }
 }

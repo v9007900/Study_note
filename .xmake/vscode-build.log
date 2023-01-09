@@ -1,4 +1,0 @@
-[  9%]: cache compiling.release U_Hook\dllmain.cpp
-[ 63%]: cache compiling.release U_Hook\include\d3dx11.cpp
-[ 81%]: linking.release Hook.dll
-[100%]: build ok!
