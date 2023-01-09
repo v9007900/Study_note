@@ -1,7 +1,15 @@
 #pragma once
 #include "d3dx11.h"
+bool bWnd = true;  // 判断菜单  真假
 
 
+typedef HRESULT(WINAPI *Present)(IDXGISwapChain *This, UINT SyncInterval, UINT Flags);
+typedef LRESULT(WINAPI *WndProc)(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+typedef HRESULT(WINAPI *Resize)(IDXGISwapChain *This, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags);
+
+
+
+HRESULT WINAPI Init(IDXGISwapChain *This, UINT SyncInterval, UINT Flags);
 
 // Data
 static ID3D11Device           *g_pd3dDevice           = NULL;
@@ -9,8 +17,127 @@ static ID3D11DeviceContext    *g_pd3dDeviceContext    = NULL;
 static IDXGISwapChain         *g_pSwapChain           = NULL;
 static ID3D11RenderTargetView *g_mainRenderTargetView = NULL;
 
-HWND     g_hWnd = nullptr;
-DWORD64 *Vtb    = nullptr;
+HWND     g_hWnd   = nullptr;
+DWORD64 *Vtb      = nullptr;
+Present  oPresent = nullptr;
+WndProc  oWndProc = nullptr;
+Resize   oResize  = nullptr;
+
+
+void GetDx11ptr(IDXGISwapChain *This);  // 会经常用到的函数          这里
+
+static bool Debug_1 = false;
+static bool Z_ji    = false;
+static bool Home    = true;
+int         hukjua {1};
+
+
+
+HRESULT WINAPI hkPresent(IDXGISwapChain *This, UINT SyncInterval, UINT Flags)
+{
+    ImGui_ImplDX11_NewFrame();
+    ImGui_ImplWin32_NewFrame();
+    ImGui::NewFrame();
+    ImGuiIO &io = ImGui::GetIO();
+    (void)io;
+
+
+    // imgui  颜色 风格
+    {
+        ImGui::StyleColorsDark();
+        ImGuiStyle &style                   = ImGui::GetStyle();
+        ImVec4     *colors                  = style.Colors;
+        colors[ImGuiCol_FrameBg]            = ImVec4(0.16f, 0.16f, 0.17f, 1.00f);
+        colors[ImGuiCol_FrameBgHovered]     = ImVec4(0.37f, 0.36f, 0.36f, 102.00f);
+        colors[ImGuiCol_FrameBgActive]      = ImVec4(0.10f, 0.10f, 0.10f, 171.00f);  // 标题
+        colors[ImGuiCol_TitleBg]            = ImVec4(0.10f, 0.10f, 0.10f, 171.00f);  // 选中标题
+        colors[ImGuiCol_TitleBgActive]      = ImVec4(0.10f, 0.10f, 0.10f, 171.00f);  // 选中标题
+        colors[ImGuiCol_CheckMark]          = ImVec4(0.61f, 0.61f, 0.61f, 1.00f);
+        colors[ImGuiCol_SliderGrab]         = ImVec4(0.64f, 0.64f, 0.64f, 1.00f);
+        colors[ImGuiCol_SliderGrabActive]   = ImVec4(0.31f, 0.31f, 0.31f, 1.00f);
+        colors[ImGuiCol_Button]             = ImVec4(0.22f, 0.22f, 0.22f, 0.40f);
+        colors[ImGuiCol_ButtonHovered]      = ImVec4(0.29f, 0.29f, 0.29f, 1.00f);
+        colors[ImGuiCol_ButtonActive]       = ImVec4(0.13f, 0.13f, 0.13f, 1.00f);
+        colors[ImGuiCol_Header]             = ImVec4(0.45f, 0.45f, 0.45f, 0.31f);
+        colors[ImGuiCol_HeaderHovered]      = ImVec4(0.55f, 0.55f, 0.55f, 0.80f);
+        colors[ImGuiCol_HeaderActive]       = ImVec4(0.09f, 0.09f, 0.09f, 1.00f);
+        colors[ImGuiCol_ResizeGrip]         = ImVec4(1.00f, 1.00f, 1.00f, 0.20f);
+        colors[ImGuiCol_ResizeGripHovered]  = ImVec4(0.46f, 0.46f, 0.46f, 0.67f);
+        colors[ImGuiCol_ResizeGripActive]   = ImVec4(0.17f, 0.17f, 0.17f, 0.95f);
+        colors[ImGuiCol_SeparatorActive]    = ImVec4(0.42f, 0.42f, 0.42f, 1.00f);
+        colors[ImGuiCol_SeparatorHovered]   = ImVec4(0.50f, 0.50f, 0.50f, 0.78f);
+        colors[ImGuiCol_TabHovered]         = ImVec4(0.45f, 0.45f, 0.45f, 0.80f);
+        colors[ImGuiCol_TabActive]          = ImVec4(0.28f, 0.28f, 0.28f, 1.00f);
+        colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.19f, 0.19f, 0.19f, 1.00f);
+        colors[ImGuiCol_DockingPreview]     = ImVec4(0.51f, 0.51f, 0.51f, 0.70f);
+        colors[ImGuiCol_Tab]                = ImVec4(0.21f, 0.21f, 0.21f, 0.86f);
+        colors[ImGuiCol_TabUnfocused]       = ImVec4(0.15f, 0.15f, 0.15f, 0.97f);
+        colors[ImGuiCol_NavHighlight]       = ImVec4(1.00f, 0.40f, 0.13f, 1.00f);
+        colors[ImGuiCol_TextSelectedBg]     = ImVec4(0.45f, 1.00f, 0.85f, 0.35f);
+        style.WindowRounding                = 4;
+        style.FrameRounding                 = 4;
+        style.GrabRounding                  = 3;
+        style.ScrollbarSize                 = 7;
+        style.ScrollbarRounding             = 0;
+    }
+
+    // ImGuiWindowFlags_AlwaysAutoResize  根据组件自动调整大小
+    // ImGuiWindowFlags_MenuBar           子菜单
+    // ImGuiWindowFlags_NoDecoration      取消标题栏
+    // ImGuiWindowFlags_NoResize          禁用右下角小三角
+
+
+    ImGui::SetNextWindowSize(ImVec2(450, 250));  // imgui 窗口大小
+    if (ImGui::Begin("标题", NULL, ImGuiWindowFlags_NoResize + ImGuiWindowFlags_NoCollapse)) {
+        ImGui::Checkbox("222", &Debug_1);  // 选项框
+        ImGui::Checkbox("333", &Z_ji);     // 选项框
+
+
+        // ImGui::SliderInt(u8"滑动条", &hukjua, 1, 5);
+    }
+    ImGui::End();
+
+
+
+    // //注入部分
+    // UWorld* World = GetWorld();
+    // TArray<AActor*>& Actors = World->PersistentLevel->Actors;
+
+    // for (size_t i = 0; i < Actors.Count; i++)
+    // {
+    //     AActor* Actor = Actors.Data[i];
+
+    //     if (!Actor || (Actor->RootComponent))
+    //         continue;
+
+    //     string ActorName = Actor->GetName();
+
+    //     if(ActorName.find("Zombie_BP") == string::npos)
+    //         continue;
+
+
+    //     FTransform& Transform = Actor->RootComponent->ComponentToWorld;
+
+    //     Vector2 Screen{ 0 };
+    //     if (WorldToScreen(Transform.Translation, Screen))
+    //     {
+    //         /*char buf[256];
+    //         sprintf(buf, "%p", Actor);*/
+    //         ImGui::GetForegroundDrawList()->AddText({ Screen.X,Screen.Y }, ImColor(255, 255,50), ActorName.c_str());
+    //     }
+
+
+    // }
+
+
+
+    ImGui::Render();
+    g_pd3dDeviceContext->OMSetRenderTargets(1, &g_mainRenderTargetView, NULL);
+    ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+    // 将imgui 绘制 提交到 dx11
+
+    return oPresent(This, SyncInterval, Flags);
+};
 
 
 void Dx11Hook()
@@ -41,17 +168,167 @@ void Dx11Hook()
     D3D_FEATURE_LEVEL featureLevel;
 
 
+
     const D3D_FEATURE_LEVEL featureLevelArray[2] = {
         D3D_FEATURE_LEVEL_11_0,
         D3D_FEATURE_LEVEL_10_0,
     };
-    HRESULT res = D3D11CreateDeviceAndSwapChain(NULL, D3D_DRIVER_TYPE_HARDWARE, NULL, createDeviceFlags, featureLevelArray, 2, D3D11_SDK_VERSION, &sd, &g_pSwapChain, nullptr,
-                                                &featureLevel, nullptr);
-    if (res == DXGI_ERROR_UNSUPPORTED)
-        res = D3D11CreateDeviceAndSwapChain(NULL, D3D_DRIVER_TYPE_WARP, NULL, createDeviceFlags, featureLevelArray, 2, D3D11_SDK_VERSION, &sd, &g_pSwapChain, nullptr,
-                                            &featureLevel, nullptr);
-    if (res != S_OK) return;  // bug 这里有优化，可能会出问题
+    if (D3D11CreateDeviceAndSwapChain(NULL, D3D_DRIVER_TYPE_HARDWARE, NULL, createDeviceFlags, featureLevelArray, 2, D3D11_SDK_VERSION, &sd, &g_pSwapChain, nullptr, &featureLevel, nullptr) != S_OK) return;
 
     Vtb = *(DWORD64 **)g_pSwapChain;
     printf("%llu\n", Vtb[8]);
+}
+
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);  // 自己加的
+
+
+LRESULT WINAPI hkWndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+    if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam)) return true;
+
+
+    return CallWindowProcA(oWndProc, hWnd, msg, wParam, lParam);
+}
+
+HRESULT WINAPI hkResize(IDXGISwapChain *This, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags)
+{
+
+
+    // imgui  颜色 风格
+    {
+        ImGui::StyleColorsDark();
+        ImGuiStyle &style                   = ImGui::GetStyle();
+        ImVec4     *colors                  = style.Colors;
+        colors[ImGuiCol_FrameBg]            = ImVec4(0.16f, 0.16f, 0.17f, 1.00f);
+        colors[ImGuiCol_FrameBgHovered]     = ImVec4(0.37f, 0.36f, 0.36f, 102.00f);
+        colors[ImGuiCol_FrameBgActive]      = ImVec4(0.10f, 0.10f, 0.10f, 171.00f);  // 标题
+        colors[ImGuiCol_TitleBg]            = ImVec4(0.10f, 0.10f, 0.10f, 171.00f);  // 选中标题
+        colors[ImGuiCol_TitleBgActive]      = ImVec4(0.10f, 0.10f, 0.10f, 171.00f);  // 选中标题
+        colors[ImGuiCol_CheckMark]          = ImVec4(0.61f, 0.61f, 0.61f, 1.00f);
+        colors[ImGuiCol_SliderGrab]         = ImVec4(0.64f, 0.64f, 0.64f, 1.00f);
+        colors[ImGuiCol_SliderGrabActive]   = ImVec4(0.31f, 0.31f, 0.31f, 1.00f);
+        colors[ImGuiCol_Button]             = ImVec4(0.22f, 0.22f, 0.22f, 0.40f);
+        colors[ImGuiCol_ButtonHovered]      = ImVec4(0.29f, 0.29f, 0.29f, 1.00f);
+        colors[ImGuiCol_ButtonActive]       = ImVec4(0.13f, 0.13f, 0.13f, 1.00f);
+        colors[ImGuiCol_Header]             = ImVec4(0.45f, 0.45f, 0.45f, 0.31f);
+        colors[ImGuiCol_HeaderHovered]      = ImVec4(0.55f, 0.55f, 0.55f, 0.80f);
+        colors[ImGuiCol_HeaderActive]       = ImVec4(0.09f, 0.09f, 0.09f, 1.00f);
+        colors[ImGuiCol_ResizeGrip]         = ImVec4(1.00f, 1.00f, 1.00f, 0.20f);
+        colors[ImGuiCol_ResizeGripHovered]  = ImVec4(0.46f, 0.46f, 0.46f, 0.67f);
+        colors[ImGuiCol_ResizeGripActive]   = ImVec4(0.17f, 0.17f, 0.17f, 0.95f);
+        colors[ImGuiCol_SeparatorActive]    = ImVec4(0.42f, 0.42f, 0.42f, 1.00f);
+        colors[ImGuiCol_SeparatorHovered]   = ImVec4(0.50f, 0.50f, 0.50f, 0.78f);
+        colors[ImGuiCol_TabHovered]         = ImVec4(0.45f, 0.45f, 0.45f, 0.80f);
+        colors[ImGuiCol_TabActive]          = ImVec4(0.28f, 0.28f, 0.28f, 1.00f);
+        colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.19f, 0.19f, 0.19f, 1.00f);
+        colors[ImGuiCol_DockingPreview]     = ImVec4(0.51f, 0.51f, 0.51f, 0.70f);
+        colors[ImGuiCol_Tab]                = ImVec4(0.21f, 0.21f, 0.21f, 0.86f);
+        colors[ImGuiCol_TabUnfocused]       = ImVec4(0.15f, 0.15f, 0.15f, 0.97f);
+        colors[ImGuiCol_NavHighlight]       = ImVec4(1.00f, 0.40f, 0.13f, 1.00f);
+        colors[ImGuiCol_TextSelectedBg]     = ImVec4(0.45f, 1.00f, 0.85f, 0.35f);
+        style.WindowRounding                = 4;
+        style.FrameRounding                 = 4;
+        style.GrabRounding                  = 3;
+        style.ScrollbarSize                 = 7;
+        style.ScrollbarRounding             = 0;
+    }
+
+
+
+    if (g_pd3dDevice) {
+        g_pd3dDevice->Release();
+        g_pd3dDevice = nullptr;
+        g_mainRenderTargetView->Release();
+        ImGui_ImplDX11_Shutdown();
+        Vtb[8] = (DWORD64)Init;
+    }
+    return oResize(This, BufferCount, Width, Height, NewFormat, SwapChainFlags);
+}
+
+HRESULT WINAPI Init(IDXGISwapChain *This, UINT SyncInterval, UINT Flags)
+{
+
+    static bool Is = true;
+    GetDx11ptr(This);
+
+    if (Is) {
+        Is       = false;
+        oWndProc = (WndProc)SetWindowLongPtrA(g_hWnd, GWLP_WNDPROC, (LONG_PTR)hkWndProc);
+        ImGui::CreateContext();    // 创建imgui 环境
+        ImGui::StyleColorsDark();  // 创建imgui 默认样式
+        ImGui_ImplWin32_Init(g_hWnd);
+
+
+        ////加载字体
+        ImGuiIO &io    = ImGui::GetIO();
+        io.ConfigFlags = ImGuiConfigFlags_NoMouseCursorChange;
+
+
+        /*ImGui::CreateContext();
+        ImGuiIO& io1 = ImGui::GetIO(); (void)io1;*/
+        // ImFont* font = io1.Fonts->AddFontFromFileTTF("D:\\Ipad\\PingFang.ttf", 20.0f, NULL, io1.Fonts->GetGlyphRangesChineseFull());
+        ImFont *font = io.Fonts->AddFontFromMemoryTTF((void *)PingFangttf_data, PingFangttf_size, 18.0f, NULL, io.Fonts->GetGlyphRangesChineseFull());  // 内存字体
+        ImGui_ImplWin32_Init(g_hWnd);
+    }
+
+
+
+    ImGui_ImplDX11_Init(g_pd3dDevice, g_pd3dDeviceContext);
+
+    Vtb[8] = (DWORD64)hkPresent;
+    return oPresent(This, SyncInterval, Flags);
+}
+
+void GetDx11ptr(IDXGISwapChain *This)  // 会经常用到的函数
+{
+    g_pSwapChain = This;
+    g_pSwapChain->GetDevice(__uuidof(g_pd3dDevice), (void **)&g_pd3dDevice);
+    g_pd3dDevice->GetImmediateContext(&g_pd3dDeviceContext);
+
+    ID3D11Texture2D *pBackBuffer;
+    g_pSwapChain->GetBuffer(0, IID_PPV_ARGS(&pBackBuffer));
+    g_pd3dDevice->CreateRenderTargetView(pBackBuffer, NULL, &g_mainRenderTargetView);
+    pBackBuffer->Release();
+}
+
+void DX11Hook()
+{
+
+    g_hWnd = FindWindowA("UnrealWindow", NULL);  // 窗口标题
+
+    DXGI_SWAP_CHAIN_DESC sd;
+    ZeroMemory(&sd, sizeof(sd));
+    sd.BufferCount                        = 2;
+    sd.BufferDesc.Width                   = 0;
+    sd.BufferDesc.Height                  = 0;
+    sd.BufferDesc.Format                  = DXGI_FORMAT_R8G8B8A8_UNORM;
+    sd.BufferDesc.RefreshRate.Numerator   = 60;
+    sd.BufferDesc.RefreshRate.Denominator = 1;
+    sd.Flags                              = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
+    sd.BufferUsage                        = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+    sd.OutputWindow                       = g_hWnd;
+    sd.SampleDesc.Count                   = 1;
+    sd.SampleDesc.Quality                 = 0;
+    sd.Windowed                           = TRUE;
+    sd.SwapEffect                         = DXGI_SWAP_EFFECT_DISCARD;
+
+    UINT createDeviceFlags = 0;
+    // createDeviceFlags |= D3D11_CREATE_DEVICE_DEBUG;
+    D3D_FEATURE_LEVEL       featureLevel;
+    const D3D_FEATURE_LEVEL featureLevelArray[2] = {
+        D3D_FEATURE_LEVEL_11_0,
+        D3D_FEATURE_LEVEL_10_0,
+    };
+    if (D3D11CreateDeviceAndSwapChain(NULL, D3D_DRIVER_TYPE_HARDWARE, NULL, createDeviceFlags, featureLevelArray, 2, D3D11_SDK_VERSION, &sd, &g_pSwapChain, nullptr, &featureLevel, nullptr) != S_OK) return;
+
+
+    Vtb = *(DWORD64 **)g_pSwapChain;
+    DWORD Prptect;
+    VirtualProtect(Vtb, 1, PAGE_EXECUTE_READWRITE, &Prptect);  // 解除保护权限
+
+    oPresent = (Present)Vtb[8];
+    oResize  = (Resize)Vtb[13];
+    Vtb[8]   = (DWORD64)Init;
+    Vtb[13]  = (DWORD64)hkResize;
+    g_pSwapChain->Release();  // 释放交换链指针
 }

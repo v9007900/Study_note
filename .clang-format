@@ -4,7 +4,7 @@ Standard: Latest
 UseTab: Never
 IndentWidth: 4
 MaxEmptyLinesToKeep: 3
-ColumnLimit: 180
+ColumnLimit: 280
 AlignConsecutiveMacros: Consecutive
 Cpp11BracedListStyle: true
 

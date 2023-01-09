@@ -1,46 +1,46 @@
 [
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
-  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\dllmain.cpp.obj", "U_Hook\\dllmain.cpp"],
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\Hook\\windows\\x64\\release\\U_Hook\\dllmain.cpp.obj", "U_Hook\\dllmain.cpp"],
   "file": "U_Hook\\dllmain.cpp"
 },
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
-  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\main.cpp.obj", "U_Hook\\main.cpp"],
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\Hook\\windows\\x64\\release\\U_Hook\\main.cpp.obj", "U_Hook\\main.cpp"],
   "file": "U_Hook\\main.cpp"
 },
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
-  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\imGui\\imgui.cpp.obj", "U_Hook\\imGui\\imgui.cpp"],
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\Hook\\windows\\x64\\release\\U_Hook\\imGui\\imgui.cpp.obj", "U_Hook\\imGui\\imgui.cpp"],
   "file": "U_Hook\\imGui\\imgui.cpp"
 },
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
-  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\imGui\\imgui_draw.cpp.obj", "U_Hook\\imGui\\imgui_draw.cpp"],
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\Hook\\windows\\x64\\release\\U_Hook\\imGui\\imgui_draw.cpp.obj", "U_Hook\\imGui\\imgui_draw.cpp"],
   "file": "U_Hook\\imGui\\imgui_draw.cpp"
 },
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
-  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\imGui\\imgui_impl_dx11.cpp.obj", "U_Hook\\imGui\\imgui_impl_dx11.cpp"],
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\Hook\\windows\\x64\\release\\U_Hook\\imGui\\imgui_impl_dx11.cpp.obj", "U_Hook\\imGui\\imgui_impl_dx11.cpp"],
   "file": "U_Hook\\imGui\\imgui_impl_dx11.cpp"
 },
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
-  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\imGui\\imgui_impl_win32.cpp.obj", "U_Hook\\imGui\\imgui_impl_win32.cpp"],
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\Hook\\windows\\x64\\release\\U_Hook\\imGui\\imgui_impl_win32.cpp.obj", "U_Hook\\imGui\\imgui_impl_win32.cpp"],
   "file": "U_Hook\\imGui\\imgui_impl_win32.cpp"
 },
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
-  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\imGui\\imgui_tables.cpp.obj", "U_Hook\\imGui\\imgui_tables.cpp"],
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\Hook\\windows\\x64\\release\\U_Hook\\imGui\\imgui_tables.cpp.obj", "U_Hook\\imGui\\imgui_tables.cpp"],
   "file": "U_Hook\\imGui\\imgui_tables.cpp"
 },
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
-  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\imGui\\imgui_widgets.cpp.obj", "U_Hook\\imGui\\imgui_widgets.cpp"],
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\Hook\\windows\\x64\\release\\U_Hook\\imGui\\imgui_widgets.cpp.obj", "U_Hook\\imGui\\imgui_widgets.cpp"],
   "file": "U_Hook\\imGui\\imgui_widgets.cpp"
 },
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
-  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\include\\d3dx11.cpp.obj", "U_Hook\\include\\d3dx11.cpp"],
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/fp:fast", "/EHsc", "/DNDEBUG", "/Fobuild\\.objs\\Hook\\windows\\x64\\release\\U_Hook\\include\\d3dx11.cpp.obj", "U_Hook\\include\\d3dx11.cpp"],
   "file": "U_Hook\\include\\d3dx11.cpp"
 }]
