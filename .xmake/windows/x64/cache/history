@@ -1,7 +1,5 @@
 {
     cmdlines = {
-        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\targetpath.lua default]],
-        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\target_rundir.lua default]],
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\target_runenvs.lua default]],
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]],
@@ -64,6 +62,8 @@
         "xmake -w",
         "xmake -w",
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\default_target.lua]],
-        "xmake run 新建文件夹"
+        "xmake run 新建文件夹",
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]]
     }
 }
