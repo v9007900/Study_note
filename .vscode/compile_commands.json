@@ -1,6 +1,11 @@
 [
 {
   "directory": "f:\\Ipad\\Study_note\\Study_note",
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\dllmain.cpp.obj", "U_Hook\\dllmain.cpp"],
+  "file": "U_Hook\\dllmain.cpp"
+},
+{
+  "directory": "f:\\Ipad\\Study_note\\Study_note",
   "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\U_Hook\\main.cpp.obj", "U_Hook\\main.cpp"],
   "file": "U_Hook\\main.cpp"
 },

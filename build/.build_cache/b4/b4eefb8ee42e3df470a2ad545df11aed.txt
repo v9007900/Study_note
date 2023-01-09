@@ -1,0 +1,4 @@
+{
+    outdata = "__cpp_d3dx11.cpp.cpp\
+"
+}

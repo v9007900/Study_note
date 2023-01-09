@@ -1,5 +1,4 @@
 #pragma once
-
 #include "d3dx11.h"
 
 
@@ -10,7 +9,10 @@ static ID3D11DeviceContext    *g_pd3dDeviceContext    = NULL;
 static IDXGISwapChain         *g_pSwapChain           = NULL;
 static ID3D11RenderTargetView *g_mainRenderTargetView = NULL;
 
-HWND g_hWnd = 0;
+HWND     g_hWnd = nullptr;
+DWORD64 *Vtb    = nullptr;
+
+
 void Dx11Hook()
 {
     // 获取游戏类名
@@ -49,4 +51,7 @@ void Dx11Hook()
         res = D3D11CreateDeviceAndSwapChain(NULL, D3D_DRIVER_TYPE_WARP, NULL, createDeviceFlags, featureLevelArray, 2, D3D11_SDK_VERSION, &sd, &g_pSwapChain, nullptr,
                                             &featureLevel, nullptr);
     if (res != S_OK) return;  // bug 这里有优化，可能会出问题
+
+    Vtb = *(DWORD64 **)g_pSwapChain;
+    printf("%llu\n", Vtb[8]);
 }
