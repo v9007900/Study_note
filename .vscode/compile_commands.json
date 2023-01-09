@@ -1,1 +1,16 @@
 [
+{
+  "directory": "f:\\Ipad\\Study_note\\Study_note",
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\string\\Class.cpp.obj", "string\\Class.cpp"],
+  "file": "string\\Class.cpp"
+},
+{
+  "directory": "f:\\Ipad\\Study_note\\Study_note",
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\string\\hstring.cpp.obj", "string\\hstring.cpp"],
+  "file": "string\\hstring.cpp"
+},
+{
+  "directory": "f:\\Ipad\\Study_note\\Study_note",
+  "arguments": ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe", "/c", "/nologo", "/Zi", "/FS", "/Fdbuild\\windows\\x86\\debug\\compile.Hook.pdb", "/Od", "/EHsc", "/Fobuild\\.objs\\Hook\\windows\\x86\\debug\\string\\main.cpp.obj", "string\\main.cpp"],
+  "file": "string\\main.cpp"
+}]
