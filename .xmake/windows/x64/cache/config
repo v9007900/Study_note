@@ -4,9 +4,9 @@
     },
     recheck = false,
     options = {
-        buildir = [[f:\Ipad\Study_note\Study_note/build]],
         arch = "x86",
+        mode = "debug",
         plat = "windows",
-        mode = "debug"
+        buildir = [[f:\Ipad\Study_note\Study_note/build]]
     }
 }
