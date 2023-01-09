@@ -1,0 +1,93 @@
+BasedOnStyle: Microsoft
+Language:	Cpp
+Standard: Latest
+UseTab: Never
+IndentWidth: 4
+MaxEmptyLinesToKeep: 3
+ColumnLimit: 180
+AlignConsecutiveMacros: Consecutive
+Cpp11BracedListStyle: true
+
+
+RemoveBracesLLVM: true
+
+
+
+
+
+# SpacesInConditionalStatement: true        # If /for/switch/while space
+# SpacesInCStyleCastParentheses: true       #   x = ( int32 )y  x = (int32)y
+SpacesInContainerLiterals: true
+# SpacesInParentheses: true                 #( Deleted & )   (Deleted &)
+
+
+
+DerivePointerAlignment: false
+PointerAlignment: Right
+ReferenceAlignment: Pointer
+AlwaysBreakAfterReturnType: None
+AlwaysBreakTemplateDeclarations: true
+AlwaysBreakBeforeMultilineStrings: true
+AlignOperands: true
+AlignConsecutiveBitFields: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+AllowAllConstructorInitializersOnNextLine: false
+BinPackArguments: false
+BinPackParameters: false
+IncludeBlocks: Regroup
+AccessModifierOffset: -4
+AlignConsecutiveDeclarations: true
+AlignConsecutiveAssignments: true
+AlignConsecutiveBitFields: Consecutive
+AlignAfterOpenBracket: Align
+AlignOperands: Align
+AlignTrailingComments: true
+ReflowComments:	true
+CommentPragmas:	'^ IWYU pragma:'
+SpacesBeforeTrailingComments:	2
+
+IncludeCategories: 
+  - Regex:	'^"(llvm|llvm-c|clang|clang-c)/'
+    Priority:	2
+  - Regex:	'^(<|"(gtest|isl|json)/)'
+    Priority:	3
+  - Regex:	'.*'
+    Priority:	1
+
+
+PenaltyBreakComment:	300
+AllowAllParametersOfDeclarationOnNextLine: false
+AlignArrayOfStructures: Left
+AllowShortBlocksOnASingleLine: Always
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: true
+AlwaysBreakAfterReturnType: None
+AlwaysBreakTemplateDeclarations: No
+BinPackArguments: true
+BinPackParameters: true
+BreakBeforeBinaryOperators: None
+BreakBeforeBraces: Stroustrup
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+BreakStringLiterals: true
+CommentPragmas: '^ FOOBAR pragma:'
+CompactNamespaces: false
+EmptyLineAfterAccessModifier: Always
+FixNamespaceComments: true
+IncludeBlocks: Regroup
+IndentAccessModifiers: false
+IndentCaseBlocks: true 
+IndentExternBlock: AfterExternBlock
+IndentGotoLabels: false
+NamespaceIndentation: All
+SpaceBeforeCpp11BracedList: true 
+
+
+
+
+
+
+ConstructorInitializerIndentWidth:	4

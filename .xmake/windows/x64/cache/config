@@ -1,0 +1,12 @@
+{
+    options = {
+        arch = "x86",
+        plat = "windows",
+        buildir = [[f:\Ipad\Study_note\Study_note/build]],
+        mode = "debug"
+    },
+    mtimes = {
+        ["xmake.lua"] = 1673254265
+    },
+    recheck = false
+}

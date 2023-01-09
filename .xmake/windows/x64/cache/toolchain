@@ -1,0 +1,62 @@
+{
+    ["tool_target_新建文件夹_windows_x86_ld"] = {
+        toolchain_info = {
+            arch = "x86",
+            name = "msvc",
+            cachekey = "msvc_arch_x86_plat_windows",
+            plat = "windows"
+        },
+        program = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\link.exe]],
+        toolname = "link"
+    },
+    ["tool_target_新建文件夹_windows_x86_cxx"] = {
+        toolchain_info = {
+            plat = "windows",
+            name = "msvc",
+            arch = "x86",
+            cachekey = "msvc_arch_x86_plat_windows"
+        },
+        program = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\cl.exe]],
+        toolname = "cl"
+    },
+    msvc_arch_x86_plat_windows = {
+        arch = "x86",
+        vs = "2022",
+        __global = true,
+        vcarchs = {
+            "arm64",
+            "x64",
+            "x86"
+        },
+        vs_toolset = "14.34.31933",
+        plat = "windows",
+        vs_sdkver = "10.0.22621.0",
+        vcvars = {
+            VSCMD_VER = "17.4.2",
+            VCToolsVersion = "14.34.31933",
+            WindowsLibPath = [[D:\Windows Kits\10\UnionMetadata\10.0.22621.0;D:\Windows Kits\10\References\10.0.22621.0]],
+            VSCMD_ARG_HOST_ARCH = "x86",
+            VSCMD_ARG_app_plat = "Desktop",
+            VCInstallDir = [[D:\Visual_Studio\Community-2022\VC\]],
+            VCToolsInstallDir = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\]],
+            WindowsSdkBinPath = [[D:\Windows Kits\10\bin\]],
+            WindowsSDKVersion = "10.0.22621.0",
+            VS170COMNTOOLS = [[D:\Visual_Studio\Community-2022\Common7\Tools\]],
+            DevEnvdir = [[D:\Visual_Studio\Community-2022\Common7\IDE\]],
+            VCIDEInstallDir = [[D:\Visual_Studio\Community-2022\Common7\IDE\VC\]],
+            WindowsSdkDir = [[D:\Windows Kits\10\]],
+            VCToolsRedistDir = [[D:\Visual_Studio\Community-2022\VC\Redist\MSVC\14.34.31931\]],
+            INCLUDE = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\include;D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\ATLMFC\include;D:\Visual_Studio\Community-2022\VC\Auxiliary\VS\include;D:\Windows Kits\10\include\10.0.22621.0\ucrt;D:\Windows Kits\10\\include\10.0.22621.0\\um;D:\Windows Kits\10\\include\10.0.22621.0\\shared;D:\Windows Kits\10\\include\10.0.22621.0\\winrt;D:\Windows Kits\10\\include\10.0.22621.0\\cppwinrt]],
+            WindowsSdkVerBinPath = [[D:\Windows Kits\10\bin\10.0.22621.0\]],
+            PATH = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86;D:\Visual_Studio\Community-2022\Common7\IDE\VC\VCPackages;D:\Visual_Studio\Community-2022\Common7\IDE\CommonExtensions\Microsoft\TestWindow;D:\Visual_Studio\Community-2022\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;D:\Visual_Studio\Community-2022\MSBuild\Current\bin\Roslyn;D:\Visual_Studio\Community-2022\Team Tools\Performance Tools;C:\Program Files (x86)\HTML Help Workshop;D:\Windows Kits\10\bin\10.0.22621.0\\x86;D:\Windows Kits\10\bin\\x86;D:\Visual_Studio\Community-2022\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework\v4.0.30319;D:\Visual_Studio\Community-2022\Common7\IDE\;D:\Visual_Studio\Community-2022\Common7\Tools\;D:\Visual_Studio\xmake;D:\vmware-17\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\APP\banzip\Bandizip\;D:\Visual_Studio\Git\Git\cmd;D:\Visual_Studio\Path\MSYS2\clang64\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\11035\AppData\Local\Microsoft\WindowsApps;D:\Visual_Studio\Vs_code\Microsoft VS Code\bin;D:\Visual_Studio\plug\mingw64\bin;D:\Visual_Studio\plug\Cmake\bin;D:\Visual_Studio\Community-2022\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;D:\Visual_Studio\Community-2022\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;D:\Visual_Studio\Community-2022\Common7\IDE\VC\Linux\bin\ConnectionManagerExe]],
+            ExtensionSdkDir = [[C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs]],
+            UniversalCRTSdkDir = [[D:\Windows Kits\10\]],
+            VisualStudioVersion = "17.0",
+            LIB = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\ATLMFC\lib\x86;D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\lib\x86;D:\Windows Kits\10\lib\10.0.22621.0\ucrt\x86;D:\Windows Kits\10\\lib\10.0.22621.0\\um\x86]],
+            VSInstallDir = [[D:\Visual_Studio\Community-2022\]],
+            VSCMD_ARG_TGT_ARCH = "x86",
+            LIBPATH = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\ATLMFC\lib\x86;D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\lib\x86;D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\lib\x86\store\references;D:\Windows Kits\10\UnionMetadata\10.0.22621.0;D:\Windows Kits\10\References\10.0.22621.0;C:\Windows\Microsoft.NET\Framework\v4.0.30319]],
+            UCRTVersion = "10.0.22621.0"
+        }
+    }
+}

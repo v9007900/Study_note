@@ -1,0 +1,9 @@
+﻿  ncdx.cpp
+  启动程序.cpp
+D:\Ipad\VS\A01\A006\ncdx.h(1,1): warning C4828: 文件包含在偏移 0x89 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+D:\Ipad\VS\A01\A006\启动程序.cpp(7,12): warning C4477: “printf”: 格式字符串“%X”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“UINT_PTR”
+D:\Ipad\VS\A01\A006\启动程序.cpp(7,12): message : 请考虑在格式字符串中使用“%llX”
+D:\Ipad\VS\A01\A006\启动程序.cpp(7,12): message : 请考虑在格式字符串中使用“%IX”
+D:\Ipad\VS\A01\A006\启动程序.cpp(7,12): message : 请考虑在格式字符串中使用“%I64X”
+  正在生成代码...
+  A006.vcxproj -> D:\Ipad\VS\A01\x64\Debug\A006.exe

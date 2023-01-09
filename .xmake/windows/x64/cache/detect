@@ -1,0 +1,24 @@
+{
+    find_program_msvc_arch_x86_plat_windows_checktoolld = {
+        ["link.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\link.exe]]
+    },
+    find_programver = {
+        ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe"] = false
+    },
+    find_program_msvc_arch_x86_plat_windows_checktoolcxx = {
+        ["cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\cl.exe]]
+    },
+    find_program = {
+        gdc = false,
+        dmd = false,
+        ["cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\cl.exe]],
+        ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX86\x86\cl.exe]],
+        zig = false,
+        ldc2 = false
+    },
+    ["lib.detect.has_flags"] = {
+        ["windows_x86_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe__cxx___-Od"] = true,
+        ["windows_x86_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe__cxx_cxflags__-FS -Fd"] = true,
+        ["windows_x86_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX86\\x86\\cl.exe__cxx_cxflags__cl_sourceDependencies"] = true
+    }
+}
