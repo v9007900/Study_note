@@ -1,2 +1,3 @@
-checking for Microsoft Visual Studio (x86) version ... 2022
-[100%]: build ok!
+[ 75%]: cache compiling.debug U_Hook\include\d3dx11.cpp
+[ 83%]: linking.debug Hook.dll
+error: 
