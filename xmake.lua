@@ -6,20 +6,21 @@ add_rules("mode.debug", "mode.release")
 
 
 
-target("Hook")                             -- imgui_DLL
-    set_kind("shared")                     -- 动态链接库
-    add_files("imGui_DLL/*.cpp")              -- 编译目标目录
-    add_files("imGui_DLL/imGui/*.cpp") 
-    add_files("imGui_DLL/include/*.cpp") 
+-- target("Hook")                             -- imgui_DLL
+--     set_kind("shared")                     -- 动态链接库
+--     add_files("imGui_DLL/*.cpp")              -- 编译目标目录
+--     add_files("imGui_DLL/imGui/*.cpp") 
+--     add_files("imGui_DLL/include/*.cpp") 
+--     add_files("imGui_DLL/include/Kiero/*.cpp") 
+--     add_files("imGui_DLL/include/mini_hook/*.cpp") 
 
-    -- target("Hook")                             -- imgui_GL
-    -- set_kind("binary")                         -- exe程序
-    -- add_files("imGui_GL/imGui/*.cpp")              -- 编译目标目录
-    -- add_linkdirs("imGui_GL/imGui/API/GLEW")
-    -- add_links("glew32")
-    -- add_linkdirs("imGui_GL/imGui/API/GLFW")
-    -- add_links("glfw3")
-    -- add_files("imGui_GL/*.cpp")              -- 编译目标目录
+
+
+    target("Hook")                             -- imgui_GL
+    set_kind("binary")                         -- exe程序
+    add_files("imGui_GL/imGui/*.cpp")              -- 编译目标目录
+    add_files("imGui_GL/*.cpp")              -- 编译目标目录
+
 
 
 
