@@ -1,8 +1,8 @@
 add_rules("mode.debug", "mode.release")
 
--- target("string")                             -- hstring 项目
---     set_kind("binary")                         -- exe程序
---     add_files("string/*.cpp")                   -- 编译目标目录
+target("string")                             -- hstring 项目
+    set_kind("binary")                         -- exe程序
+    add_files("string/*.cpp")                   -- 编译目标目录
 
 
 
@@ -16,10 +16,10 @@ add_rules("mode.debug", "mode.release")
 
 
 
-    target("Hook")                             -- imgui_GL
-    set_kind("binary")                         -- exe程序
-    add_files("imGui_GL/imGui/*.cpp")              -- 编译目标目录
-    add_files("imGui_GL/*.cpp")              -- 编译目标目录
+    -- target("Hook")                             -- imgui_GL
+    -- set_kind("binary")                         -- exe程序
+    -- add_files("imGui_GL/imGui/*.cpp")              -- 编译目标目录
+    -- add_files("imGui_GL/*.cpp")              -- 编译目标目录
 
 
 
