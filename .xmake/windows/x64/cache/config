@@ -3,7 +3,6 @@
     options = {
         mode = "release",
         buildir = [[f:\Ipad\Study_note\Study_note/build]],
-        toolchain = "msvc",
         plat = "windows",
         arch = "x64"
     },

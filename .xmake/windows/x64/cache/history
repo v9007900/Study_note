@@ -42,6 +42,17 @@
         "xmake build -w string",
         "xmake run string",
         "xmake build -w string",
-        "xmake run string"
+        "xmake run string",
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]],
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]],
+        [[xmake f -p windows -a x64 -m release -o f:\Ipad\Study_note\Study_note/build]],
+        "xmake -w",
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\targetpath.lua default]],
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\target_rundir.lua default]],
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\target_runenvs.lua default]],
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
+        [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]]
     }
 }
