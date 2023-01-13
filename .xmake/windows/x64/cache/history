@@ -1,6 +1,5 @@
 {
     cmdlines = {
-        "xmake -w",
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\archs.lua windows]],
         [[xmake f -p windows -a x86 -m release -o f:\Ipad\Study_note\Study_note/build]],
         "xmake build -w string",
@@ -64,6 +63,7 @@
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\config.lua]],
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\update_intellisense.lua .vscode]],
         [[xmake l c:\Users\11035\.vscode\extensions\tboox.xmake-vscode-1.9.2\assets\explorer.lua]],
+        "xmake -w",
         "xmake -w"
     }
 }

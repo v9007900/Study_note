@@ -1,11 +1,6 @@
-checking for Microsoft Visual Studio (x86) version ... 2022
 [ 10%]: cache compiling.release imGui_DLL\dllmain.cpp
-[ 10%]: cache compiling.release imGui_DLL\imGui\imgui_impl_win32.cpp
-[ 10%]: cache compiling.release imGui_DLL\imGui\imgui_tables.cpp
-[ 10%]: cache compiling.release imGui_DLL\imGui\imgui_draw.cpp
-[ 10%]: cache compiling.release imGui_DLL\imGui\imgui_impl_dx11.cpp
-[ 10%]: cache compiling.release imGui_DLL\imGui\imgui.cpp
-[ 10%]: cache compiling.release imGui_DLL\imGui\imgui_widgets.cpp
-[ 80%]: linking.release Hook.dll
-[100%]: build ok!
+error: dllmain.cpp
+F:\Ipad\Study_note\Study_note\imGui_DLL\dllmain.cpp(24) : error C4716: “KieroExampleThread”: 必须返回一个值
+
+  > in imGui_DLL\dllmain.cpp
 warning: cannot match target(Hook).add_files("imGui_DLL\include\*.cpp") at .\xmake.lua:13

@@ -6,10 +6,11 @@ Present oPresent;
 HRESULT _stdcall hkEndScene(IDXGISwapChain *pSwapChain, UINT Synclnterval, UINT Flags)
 {
     static bool init_hook = false;
-    if (!init) {
+    if (!init_hook) {
         MessageBox(0, "BOOm", "Kiero", MB_OK);
-        init = true;
+        init_hook = true;
     }
+    return oPresent(pSwapChain, Synclnterval, Flags);
 }
 
 int KieroExampleThread()
