@@ -1,1 +1,11 @@
-[100%]: build ok!
+cleanup C:\Users\11035\AppData\Local\Temp\.xmake\230114 ..
+cleanup F:\Ipad\Study_note\Study_note\.xmake\windows\x64\tmp\230114 ..
+IDXGISwapChain *,unsigned int,unsigned int)" (?oPresent@@YAJPEAUIDXGISwapChain@@II@Z)，函数 "int __cdecl KieroExampleThread(void)" (?KieroExampleThread@@YAHXZ) 中引用了该符号
+kiero.cpp.obj : error LNK2019: 无法解析的外部符号 MH_Initialize，函数 "enum kiero::Status::Enum __cdecl kiero::init(enum kiero::RenderType::Enum)" (?init@kiero@@YA?AW4Enum@Status@1@W42RenderType@1@@Z) 中引用了该符号
+kiero.cpp.obj : error LNK2019: 无法解析的外部符号 MH_CreateHook，函数 "enum kiero::Status::Enum __cdecl kiero::bind(unsigned short,void * *,void *)" (?bind@kiero@@YA?AW4Enum@Status@1@GPEAPEAXPEAX@Z) 中引用了该符号
+kiero.cpp.obj : error LNK2019: 无法解析的外部符号 MH_EnableHook，函数 "enum kiero::Status::Enum __cdecl kiero::bind(unsigned short,void * *,void *)" (?bind@kiero@@YA?AW4Enum@Status@1@GPEAPEAXPEAX@Z) 中引用了该符号
+kiero.cpp.obj : error LNK2019: 无法解析的外部符号 MH_DisableHook，函数 "void __cdecl kiero::shutdown(void)" (?shutdown@kiero@@YAXXZ) 中引用了该符号
+f:\Ipad\Study_note\Study_note\build\windows\x64\release\Hook.dll : fatal error LNK1120: 5 个无法解析的外部命令
+
+warning: cannot match target(Hook).add_files("imGui_DLL\include\*.cpp") at .\xmake.lua:13
+warning: add -v for getting more warnings ..

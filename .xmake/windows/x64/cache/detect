@@ -1,20 +1,20 @@
 {
-    find_program_msvc_arch_x64_plat_windows_checktoolld = {
+    find_program_msvc_arch_x64_plat_windows_checktoolsh = {
         ["link.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\link.exe]]
+    },
+    find_program_msvc_arch_x64_plat_windows_checktoolcxx = {
+        ["cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\cl.exe]]
+    },
+    ["lib.detect.has_flags"] = {
+        ["windows_x64_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags__-DNDEBUG"] = true,
+        ["windows_x64_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe__cxx___-O2 -fp:fast"] = true
     },
     find_programver = {
         ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe"] = false
     },
     find_program = {
+        git = "git",
         ["D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\cl.exe]],
-        ["cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\cl.exe]]
-    },
-    ["lib.detect.has_flags"] = {
-        ["windows_x64_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags__-DNDEBUG"] = true,
-        ["windows_x64_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe__cxx___-O2 -fp:fast"] = true,
-        ["windows_x64_D:\\Visual_Studio\\Community-2022\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags__cl_sourceDependencies"] = true
-    },
-    find_program_msvc_arch_x64_plat_windows_checktoolcxx = {
         ["cl.exe"] = [[D:\Visual_Studio\Community-2022\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\cl.exe]]
     }
 }
